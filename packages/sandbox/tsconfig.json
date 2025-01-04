@@ -1,0 +1,17 @@
+{
+  "extends": "@repo/configs/tsconfig.vite.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": [
+      "@types/repo",
+      "vite/client",
+      "node",
+    ],
+  },
+  "include": [
+    "src",
+    "eslint.config.js",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**"]
+    },
+    "check-lint": {
+      "cache": true,
+      "persistent": false
+    },
+    "check-types": {
+      "cache": true,
+      "persistent": false
+    },
+    "test": {
+      "cache": true,
+      "persistent": false
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

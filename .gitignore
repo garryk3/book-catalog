@@ -1,0 +1,13 @@
+.DS_Store
+node_modules
+.turbo
+*.log
+dist
+**/dist
+build
+**/build
+dist-ssr
+*.local
+.env
+.cache
+**/.__mf__temp

@@ -1,0 +1,68 @@
+declare module '*.svg' {
+    import React from 'react'
+
+    const ReactComponent: React.FC<any>;
+    const Path: string;
+
+    export { ReactComponent };
+    export default Path;
+}
+
+// In TS, interfaces are "open" and can be extended
+interface Date {
+    /**
+     * Give a more precise return type to the method `toISOString()`:
+     * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
+     */
+    toISOString(): TDateISO;
+}
+  
+type TYear         = `${number}${number}${number}${number}`;
+type TMonth        = `${number}${number}`;
+type TDay          = `${number}${number}`;
+type THours        = `${number}${number}`;
+type TMinutes      = `${number}${number}`;
+type TSeconds      = `${number}${number}`;
+type TMilliseconds = `${number}${number}${number}`;
+  
+  /**
+   * Represent a string like `2021-01-08`
+   */
+type TDateISODate = `${TYear}-${TMonth}-${TDay}`;
+  
+  /**
+   * Represent a string like `14:42:34.678`
+   */
+type TDateISOTime = `${THours}:${TMinutes}:${TSeconds}.${TMilliseconds}`;
+  
+  /**
+   * Represent a string like `2021-01-08T14:42:34.678Z` (format: ISO 8601).
+   *
+   * It is not possible to type more precisely (list every possible values for months, hours etc) as
+   * it would result in a warning from TypeScript:
+   *   "Expression produces a union type that is too complex to represent. ts(2590)
+   */
+type TDateISO = `${TDateISODate}T${TDateISOTime}Z`;
+
+type TypedMemo = <T>(c: T) => T;
+
+type TypedForwardRef = <T, P = {}, >(render: (props: P, ref: React.Ref<T>) => React.ReactElement | null) => (props: P & React.RefAttributes<T>) => React.ReactElement | null
+
+type CopyRecord<T> = { [K in keyof T]: T[K] }
+
+type NestedKeyOf<F extends Record<string, unknown>> = {
+    [Key in keyof F & string]: F[Key];
+}[keyof F & string];
+
+interface AppServerError {
+  message?: string;
+  code?: number;
+  status?: number;
+}
+
+type Base64String = string;
+
+type TypeMapAsGeneric<K extends keyof V, V> = {
+  [P in K]: V[P]
+}[K];
+

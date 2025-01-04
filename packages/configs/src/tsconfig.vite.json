@@ -1,0 +1,28 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "sourceMap": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "paths": {
+      "*": ["./@mf-types/*"],
+      "react": ["../../node_modules/preact/compat/"],
+      "react-dom": ["../../node_modules/preact/compat/"],
+      "react-dom/*": ["../../node_modules/preact/compat/*"],
+      "react/jsx-runtime": ["../../node_modules/preact/jsx-runtime"],
+      "#src/*": ["./*"],
+      "#application": ["./src/application/index.ts"],
+      "#features/*": ["./src/presentation/features/*"],
+      "#ui/*": ["./src/presentation/ui/*"],
+      "#pages/*": ["./src/presentation/pages/*"],
+      "#infrastructure/*": ["./src/infrastructure/*"]
+    }  
+  },
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,72 @@
+{
+  "name": "template",
+  "version": "0.0.0",
+  "description": "template",
+  "author": "IVGolubev",
+  "private": true,
+  "keywords": [
+    "template",
+    "gamification"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:garryk3/monorepo-template.git"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "ci-install": "npm ci --no-audit ",
+    "ci-check": "npm run lint-root & turbo check-types check-lint test",
+    "ci-build": "turbo build --filter='./apps/*'",
+    "build": "sh ./cli_utils/build.sh",
+    "lint-root": "eslint . --max-warnings=0 --fix --config=eslint.config.js",
+    "test-all": "turbo test",
+    "clean": "sh ./cli_utils/cleandirs.sh",
+    "precommit-all": "turbo precommit",
+    "version-up": "",
+    "start": "turbo start",
+    "tag": "git tag --",
+    "start-emu": "turbo run build --filter=@repo/example && turbo run start --filter=@repo/prod-emulator"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run precommit-all",
+    "pre-push": "npm run test-all",
+    "preserveUnused": true
+  },
+  "type": "module",
+  "packageManager": "npm@7.21.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.25.8",
+    "@babel/eslint-parser": "7.25.8",
+    "@babel/plugin-syntax-import-assertions": "7.25.7",
+    "@babel/plugin-syntax-jsx": "7.25.7",
+    "@babel/preset-env": "7.25.8",
+    "@babel/preset-react": "7.25.7",
+    "@babel/preset-typescript": "7.25.7",
+    "@eslint/js": "9.13.0",
+    "@front-utils/linter": "1.0.1",
+    "eslint": "8.57.0",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-import-resolver-webpack": "0.13.9",
+    "eslint-plugin-compat": "6.0.1",
+    "eslint-plugin-filenames": "1.3.2",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jest-dom": "5.4.0",
+    "eslint-plugin-jsx-a11y": "6.10.0",
+    "eslint-plugin-optimize-regex": "1.2.1",
+    "eslint-plugin-promise": "7.1.0",
+    "eslint-plugin-react": "7.37.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-sonarjs": "2.0.3",
+    "eslint-plugin-testing-library": "6.4.0",
+    "globals": "15.12.0",
+    "lint-staged": "15.2.10",
+    "simple-git-hooks": "2.11.1",
+    "turbo": "2.3.3",
+    "typescript": "5.6.3",
+    "typescript-eslint": "8.13.0"
+  }
+}

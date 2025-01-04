@@ -1,0 +1,38 @@
+{
+    "name": "@repo/prod-emulator",
+    "version": "0.0.0",
+    "description": "",
+    "author": "Gamification team",
+    "license": "ISC",
+    "type": "module",
+    "types": "./src/index.d.ts",
+    "private": true,
+    "imports": {
+        "#application": "./src/application/index.ts",
+        "#features/*": "./src/presentation/features/*",
+        "#ui/*": "./src/presentation/ui/*",
+        "#pages/*": "./src/presentation/pages/*",
+        "#infrastructure/*": "./src/infrastructure/*"
+    },
+    "scripts": {
+        "check-types": "tsc --noEmit",
+        "check-lint": "eslint src --max-warnings=0 --fix",
+        "precommit": "lint-staged --no-stash",
+        "build": "vite build",
+        "start": "sh start.sh"
+    },
+    "dependencies": {
+        "@repo/example": "*",
+        "http-server": "14.1.0",
+        "preact": "10.25.0",
+        "preact-iso": "2.8.1",
+        "react": "npm:@preact/compat",
+        "react-dom": "npm:@preact/compat"
+    },
+    "devDependencies": {
+        "@module-federation/vite": "^1.1.8",
+        "@preact/preset-vite": "^2.9.0",
+        "@repo/configs": "*",
+        "vite": "^5.3.3"
+    }
+}
