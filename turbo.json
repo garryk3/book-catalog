@@ -20,6 +20,10 @@
     "start": {
       "cache": false,
       "persistent": true
+    },
+    "precommit": {
+      "cache": false,
+      "persistent": false
     }
   }
 }

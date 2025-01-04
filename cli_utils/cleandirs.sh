@@ -23,7 +23,7 @@ rm -rf node_modules
 
 # Удаление node_modules в поддиректориях внутри apps
 if [ -d "apps" ]; then
-    subdirs1=("example")
+    subdirs1=("core")
     delete_node_modules_in_subdirs "apps" "${subdirs1[@]}"
 else
     echo "Директория apps не найдена."

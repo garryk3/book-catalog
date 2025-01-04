@@ -1,9 +1,9 @@
 {
   "name": "@types/repo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Global types for monorepo projects",
   "main": "",
-  "author": "VTB Gamification Team",
+  "author": "VTB IVGolubev",
   "license": "ISC",
   "types": "index.d.ts",
   "exports": {

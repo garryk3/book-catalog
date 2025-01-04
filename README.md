@@ -7,7 +7,7 @@
 Для работы в режиме мока обращений к API используется сервис [mock_api](packages/mock_api/README.md).
 
 **Приложения (apps)**
-- [@repo/example](./apps/example/README.md) - микросервис example
+- [@repo/core](./apps/core/README.md) - микросервис каталог книг
 
 **Вспомогательные приложения (packages)**
 - [@repo/ui](./packages/ui/README.md) - общая библиотека компонентов (!TODO)
@@ -23,6 +23,3 @@
 - [Архитектура компонентов](./docs/ARCH_CMP.md)
 - [Правила работы с проектом](./docs/DEV_RULES.md)
 - [Правила работы с системой контроля версий](./docs/GIT.md)
-- [Стенды](./docs/STANDS.md)
-- [CICD](./docs/CICD.md)
-- [Разработка и тестирование](./docs/DEVELOPMENT.md)

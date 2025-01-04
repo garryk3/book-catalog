@@ -1,8 +1,8 @@
 {
     "name": "@repo/prod-emulator",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "",
-    "author": "Gamification team",
+    "author": "IVGolubev",
     "license": "ISC",
     "type": "module",
     "types": "./src/index.d.ts",
@@ -18,13 +18,12 @@
         "check-types": "tsc --noEmit",
         "check-lint": "eslint src --max-warnings=0 --fix",
         "precommit": "lint-staged --no-stash",
-        "build": "vite build",
-        "start": "sh start.sh"
+        "build": "vite build"
     },
     "dependencies": {
-        "@repo/example": "*",
+        "@repo/core": "*",
         "http-server": "14.1.0",
-        "preact": "10.25.0",
+        "preact": "10.25.4",
         "preact-iso": "2.8.1",
         "react": "npm:@preact/compat",
         "react-dom": "npm:@preact/compat"
