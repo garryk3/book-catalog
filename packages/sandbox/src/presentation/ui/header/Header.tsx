@@ -12,7 +12,7 @@ export const Header = () => {
         <header class='sb__header'>
             <nav>
                 <a href="/" className={url == '/' ? 'active': undefined}>
-                    Home
+                    Песочница
                 </a>
                 <hr />
                 {exportRoutes.map((route, index) => (

@@ -8,7 +8,7 @@ export const exportRoutes = [
         component: Home,
         path     : '/book_home',
         default  : false,
-        name     : 'Каталог',
+        name     : 'Каталог книг',
     }
 ];
 
