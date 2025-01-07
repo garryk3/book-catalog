@@ -1,0 +1,31 @@
+import { Card, Tooltip } from 'antd';
+import { h } from 'preact';
+
+import { Title } from '#ui/typography';
+
+import { HomeCardProps } from '../types';
+import classes from '../styles.module.css';
+
+export const HomeCard = ({
+    title,
+    id,
+}: HomeCardProps) => {
+    return (
+        <Card 
+            title={(
+                <Tooltip title={title}>
+                    <Title 
+                        ellipsis 
+                        level={5}
+                    >
+                        {title}
+                    </Title>
+                </Tooltip>
+            )}
+            data-id={id}
+            className={classes.home__card}
+        >
+            Card content
+        </Card>
+    );
+};

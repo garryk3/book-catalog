@@ -18,22 +18,22 @@
         "#infrastructure/*": "./src/infrastructure/*"
     },
     "scripts": {
-        "start:app": "vite",
         "build": "vite build --emptyOutDir",
         "preview": "vite preview",
+        "start": "vite --clearScreen false",
         "check-types": "tsc --noEmit",
         "check-lint": "eslint src --max-warnings=0 --fix",
         "test": "echo 'test'",
         "precommit": "lint-staged --no-stash"
     },
     "dependencies": {
+        "@ant-design/icons": "^5.5.2",
         "@preact/signals": "2.0.0",
         "antd": "^5.22.7",
         "preact": "10.25.4",
         "preact-iso": "2.8.1"
     },
     "devDependencies": {
-        "@module-federation/vite": "^1.2.0",
         "@preact/preset-vite": "^2.9.4",
         "@repo/configs": "*",
         "vite": "^5.3.3"

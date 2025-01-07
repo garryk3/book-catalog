@@ -1,0 +1,10 @@
+.home__card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.home__card {
+    cursor: pointer;
+}

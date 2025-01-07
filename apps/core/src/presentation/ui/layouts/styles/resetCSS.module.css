@@ -1,0 +1,26 @@
+
+
+@layer reset, antd;
+@import url(antd/dist/reset.css) layer(reset);
+
+& * {
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #312d2d;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #000c17;
+        border-radius: 6px;
+        border: 1px solid rgb(123, 116, 116);
+      }
+      
+      &::-webkit-scrollbar-thumb:hover {
+        background: #0704049a;
+      }
+
+}

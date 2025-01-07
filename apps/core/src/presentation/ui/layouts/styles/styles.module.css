@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.layout {
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+    padding: 24px;
+}
+
+.appLayout {
+    height: 100vh;
+}
+
+.appLayout__main {
+    overflow: auto;
+    scrollbar-gutter: stable;
+}
+
+.appLayout__sidebar {
+    padding: 8px;
+}

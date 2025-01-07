@@ -1,21 +1,38 @@
 import { lazy } from 'preact-iso';
 
+import { RouteUrls } from '#infrastructure/constants';
+
 const Home = lazy(() => import('#pages/home'));
 const NotFound = lazy(() => import('#pages/not_found'));
-
-export const exportRoutes = [
-    {
-        component: Home,
-        path     : '/book_home',
-        default  : false,
-        name     : 'Каталог книг',
-    }
-];
+const Authors = lazy(() => import('#pages/authors'));
+const Categories = lazy(() => import('#pages/categories'));
+const Series = lazy(() => import('#pages/series'));
+const Book = lazy(() => import('#pages/book'));
 
 export const appRoutes = [
     {
         component: Home,
-        path     : '/',
+        path     : RouteUrls.HOME,
+        default  : false,
+    },
+    {
+        component: Authors,
+        path     : RouteUrls.AUTHORS,
+        default  : false,
+    },
+    {
+        component: Categories,
+        path     : RouteUrls.CATEGORIES,
+        default  : false,
+    },
+    {
+        component: Series,
+        path     : RouteUrls.SERIES,
+        default  : false,
+    },
+    {
+        component: Book,
+        path     : `${RouteUrls.BOOK}/:id`,
         default  : false,
     },
     {
