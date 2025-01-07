@@ -16,7 +16,7 @@ export const Home = memo(() => {
         const parentWithType = clickedElement.closest<HTMLDivElement>('[data-id]');
 
         if(parentWithType) {
-            route(`${RouteUrls.BOOK}/${parentWithType.dataset.id}`);
+            route(`${RouteUrls.BOOK}/${parentWithType.dataset.id}`, false);
         }
     };
     

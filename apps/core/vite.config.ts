@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, PluginOption } from 'vite';
 import preact from '@preact/preset-vite';
 
 import {APP_NAME_EXAMPLE, APP_PORT_EXAMPLE} from '@repo/configs';
@@ -10,7 +10,7 @@ export default defineConfig({
     },
     base   : `http://localhost:${APP_PORT_EXAMPLE}`,
     plugins: [
-        preact()
+        preact() as PluginOption
     ],
     build: {
         target: 'esnext',
