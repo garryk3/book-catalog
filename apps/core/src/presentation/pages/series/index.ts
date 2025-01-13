@@ -1,3 +1,1 @@
-import {Series} from './components/Series';
-
-export default Series;
+export {Series,} from './components/Series';

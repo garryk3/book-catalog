@@ -8,7 +8,6 @@ import classes from '../styles.module.css';
 
 export const HomeCard = ({
     title,
-    id,
 }: HomeCardProps) => {
     return (
         <Card 
@@ -22,7 +21,6 @@ export const HomeCard = ({
                     </Title>
                 </Tooltip>
             )}
-            data-id={id}
             className={classes.home__card}
         >
             Card content

@@ -1,3 +1,1 @@
-import { Book } from './components/Book';
-
-export default Book;
+export { Book, } from './components/Book';

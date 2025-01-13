@@ -1,3 +1,1 @@
-import { Authors } from './components/Authors';
-
-export default Authors;
+export { Authors, } from './components/Authors';

@@ -1,1 +1,1 @@
-export * from './core';
+export {App,} from './components/App';

@@ -5,45 +5,39 @@ import {
     UserOutlined,
     VideoCameraOutlined
 } from '@ant-design/icons';
-import { useLocation } from "preact-iso";
-import { type MenuItemType } from "antd/es/menu/interface";
+import { useLocation, Link, LinkProps } from "@tanstack/react-router";
 
 import { RouteUrls } from '#infrastructure/constants';
 
 import classes from '../styles/styles.module.css';
 import '../styles/resetCSS.module.css';
-import { useCallback } from "preact/hooks";
 
 const { Footer, Sider, Content, } = Layout;
 const menuItems = [
     {
         key  : RouteUrls.HOME,
         icon : <UserOutlined />,
-        label: 'Каталог',
+        label: <Link {...{to: RouteUrls.HOME,} as LinkProps}>Каталог</Link>,
     },
     {
         key  : RouteUrls.AUTHORS,
         icon : <VideoCameraOutlined />,
-        label: 'Авторы',
+        label: <Link {...{to: RouteUrls.AUTHORS,} as LinkProps}>Авторы</Link>,
     },
     {
         key  : RouteUrls.CATEGORIES,
         icon : <UploadOutlined />,
-        label: 'Категории',
+        label: <Link {...{to: RouteUrls.CATEGORIES,} as LinkProps}>Категории</Link>,
     },
     {
         key  : RouteUrls.SERIES,
         icon : <UploadOutlined />,
-        label: 'Серии',
+        label: <Link {...{to: RouteUrls.SERIES,} as LinkProps}>Серии</Link>,
     }
 ];
 
 export const AppLayout: FunctionComponent = ({ children, }) => {
-    const {route, url,} = useLocation();
-
-    const onClickMenuItem = useCallback((info: MenuItemType) => {
-        route(info.key);
-    }, [route]);
+    const {pathname,} = useLocation();
 
     return (
         <Layout className={classes.appLayout}>
@@ -55,8 +49,7 @@ export const AppLayout: FunctionComponent = ({ children, }) => {
                     <Menu
                         theme="dark"
                         mode="inline"
-                        defaultSelectedKeys={[url]}
-                        onClick={onClickMenuItem}
+                        defaultSelectedKeys={[pathname]}
                         items={menuItems}
                     />
                 </div>

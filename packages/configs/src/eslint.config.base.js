@@ -1,5 +1,6 @@
 import { configs, utils } from '@front-utils/linter/dist/index.js';
 import turbo from "eslint-plugin-turbo";
+import pluginRouter from '@tanstack/eslint-plugin-router';
 
 const turboBaseConfig = [
     turbo.configs["flat/recommended"]
@@ -20,5 +21,6 @@ export const appLintConfig = [
             sourceType: 'module',
         },
     },
-    ...turboBaseConfig
+    ...turboBaseConfig,
+    ...pluginRouter.configs['flat/recommended']
 ];
