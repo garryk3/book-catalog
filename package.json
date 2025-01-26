@@ -1,16 +1,17 @@
 {
-  "name": "template",
+  "name": "book-catalog",
   "version": "0.0.1",
-  "description": "template",
+  "description": "book catalog, usage calibre data",
   "author": "IVGolubev",
   "private": true,
   "keywords": [
-    "template",
-    "gamification"
+    "book",
+    "catalog",
+    "calibre viewer"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:garryk3/monorepo-template.git"
+    "url": "git@github.com:garryk3/book-catalog.git"
   },
   "scripts": {
     "dev": "turbo dev",
@@ -33,7 +34,7 @@
     "preserveUnused": true
   },
   "type": "module",
-  "packageManager": "npm@7.21.0",
+  "packageManager": "npm@11.00.0",
   "workspaces": [
     "apps/*",
     "packages/*"

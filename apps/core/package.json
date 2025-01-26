@@ -31,7 +31,8 @@
         "@preact/signals": "2.0.0",
         "@tanstack/react-router": "^1.95.5",
         "antd": "^5.23.0",
-        "preact": "10.25.4"
+        "preact": "10.25.4",
+        "virtua": "^0.39.3"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.9.4",
