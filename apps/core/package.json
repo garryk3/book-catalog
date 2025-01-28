@@ -28,6 +28,8 @@
     },
     "dependencies": {
         "@ant-design/icons": "^5.5.2",
+        "@front-utils/react-hooks": "^0.1.6",
+        "@front-utils/utils": "^0.2.7",
         "@preact/signals": "2.0.0",
         "@tanstack/react-router": "^1.95.5",
         "antd": "^5.23.0",
